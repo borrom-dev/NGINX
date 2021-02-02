@@ -1,4 +1,4 @@
-## 1. Create a virtual host
+## 1. Create a Virtual Host
 
 ```java
  http {
@@ -57,3 +57,44 @@ $ nginx -t
   
  }
 ```
+
+## 2. Location Block
+
+```java
+ 
+ include mine.types
+ 
+ http {
+ 
+  listen 80;
+  server_name 167.99.93.26;
+  
+  root /site/demo;
+  
+  location /great {
+   return 200 "Hello World";
+  }
+  
+ }
+```
+
+Or
+
+```java
+ 
+ include mine.types
+ 
+ http {
+ 
+  listen 80;
+  server_name 167.99.93.26;
+  
+  root /site/demo;
+  
+  location = /great {
+   return 200 "Hello World";
+  }
+  
+ }
+```
+
