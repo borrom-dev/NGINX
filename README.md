@@ -12,7 +12,7 @@
 ```
 ### How to reload service
 
-```
+```java
 $ systemctl reload nginx
 ```
 
