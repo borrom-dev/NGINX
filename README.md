@@ -98,3 +98,32 @@ Or
  }
 ```
 
+## 3. Variables
+
+```java
+ 
+ include mine.types
+ 
+ server {
+ 
+    http {
+
+     if($arg_api_key != 123){
+         return 401 "Incorrect API KEY";
+     }
+     
+     listen 80;
+     server_name 167.99.93.26;
+
+     root /site/demo;
+
+     location = /great {
+      return 200 "Hello World";
+     }
+     
+   }
+   
+ }
+```
+
+
